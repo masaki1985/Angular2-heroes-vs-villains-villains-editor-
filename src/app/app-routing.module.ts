@@ -5,6 +5,8 @@ import { HeroService } from './heroes/shared/hero.service';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 
+import { VillainListComponent } from './villains/villain-list/villain-list.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -24,6 +26,19 @@ const routes: Routes = [
       {
         path: '**',
         redirectTo: 'hero-list',
+      }
+    ]
+  },
+  {
+    path: 'villains',
+    children: [
+      {
+        path: 'villain-list',
+        component: VillainListComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'villain-list',
       }
     ]
   }

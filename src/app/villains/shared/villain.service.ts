@@ -15,7 +15,7 @@ export class VillainService {
     private http: Http,
   ) { }
 
-  getVillains() Observable<Villain[]> {
+  getVillains(): Observable<Villain[]> {
     return this.http.get(this.villainsUrl)
                     .map(res => res.json().data as Villain[]);
   }
@@ -35,9 +35,9 @@ export class VillainService {
                     .map(() => villain);
   }
 
-  createVillain(name: string); Observable<villain> {
+  createVillain(name: string): Observable<Villain> {
     return this.http.post(this.villainsUrl, JSON.stringify({ name: name}), { headers: this.headers })
-                    .mpa(res => res.json().data);
+                    .map(res => res.json().data);
   }
 
   deleteVillain(id: number): Observable<void> {

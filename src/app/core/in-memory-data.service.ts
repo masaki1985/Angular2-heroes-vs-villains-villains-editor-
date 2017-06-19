@@ -1,7 +1,9 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class InMemoryDataService implements InMemoryDbService {
+  
   createDb() {
+    
     let heroes = [
       { id: 1, name: 'Spider-Man' },
       { id: 2, name: 'Captain Marvel' },
@@ -14,6 +16,21 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 9, name: 'Captain America' },
       { id: 10, name: 'Wolverine' },
     ];
-    return { heroes };
+
+    let villains = [
+      { id: 1, name: 'Magneto' },
+      { id: 2, name: 'Loki' },
+      { id: 3, name: 'Venom' },
+      { id: 4, name: 'Dr. Doom' },
+      { id: 5, name: 'Carnage' },
+      { id: 6, name: 'Green Goblin' },
+      { id: 7, name: 'Ultron' },
+      { id: 8, name: 'Thanos' },
+      { id: 9, name: 'Galactus' },
+      { id: 10, name: 'Deadpool' },
+    ];
+    
+    return { heroes, villains };
   }
+
 }
