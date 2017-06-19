@@ -18,6 +18,7 @@ import { ZeroPaddingPipe } from './shared/zero-padding.pipe';
 import { VillainsComponent } from './villains/villains.component';
 import { VillainListComponent } from './villains/villain-list/villain-list.component';
 import { VillainService } from "app/villains/shared/villain.service";
+import { VillainComponent } from './villains/villain/villain.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { VillainService } from "app/villains/shared/villain.service";
     ZeroPaddingPipe,
     VillainsComponent,
     VillainListComponent,
+    VillainComponent,
   ],
   imports: [
     BrowserModule,
