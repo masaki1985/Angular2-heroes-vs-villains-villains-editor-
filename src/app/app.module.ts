@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './core/in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import { HeroService } from './heroes/shared/hero.service';
 import { ZeroPaddingPipe } from './shared/zero-padding.pipe';
 import { VillainsComponent } from './villains/villains.component';
 import { VillainListComponent } from './villains/villain-list/villain-list.component';
+import { VillainService } from "app/villains/shared/villain.service";
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { VillainListComponent } from './villains/villain-list/villain-list.compo
   ],
   providers: [
     HeroService,
+    VillainService,
   ],
   bootstrap: [AppComponent]
 })

@@ -19,4 +19,7 @@ export class AppComponent {
     this.router.navigateByUrl('/heroes/hero-list');
   }
 
+  gotoVillains(): void {
+    this.router.navigateByUrl('/villains/vilalin-list');
+  }
 }

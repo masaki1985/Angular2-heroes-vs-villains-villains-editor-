@@ -35,6 +35,10 @@ const routes: Routes = [
       {
         path: 'villain-list',
         component: VillainListComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'villain-list',
       }
     ]
   }
