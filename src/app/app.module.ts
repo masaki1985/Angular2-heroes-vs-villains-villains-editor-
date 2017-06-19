@@ -14,6 +14,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { HeroService } from './heroes/shared/hero.service';
 import { ZeroPaddingPipe } from './shared/zero-padding.pipe';
+import { VillainsComponent } from './villains/villains.component';
+import { VillainListComponent } from './villains/villain-list/villain-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ZeroPaddingPipe } from './shared/zero-padding.pipe';
     HeroesComponent,
     HeroListComponent,
     ZeroPaddingPipe,
+    VillainsComponent,
+    VillainListComponent,
   ],
   imports: [
     BrowserModule,
