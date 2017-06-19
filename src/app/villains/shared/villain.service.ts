@@ -27,7 +27,7 @@ export class VillainService {
                     .map(res => res.json().data as Villain);
   }
 
-  updataVillain(villain: Villain): Observable<Villain> {
+  updateVillain(villain: Villain): Observable<Villain> {
     const url = `${this.villainsUrl}/${villain.id}`;
 
     return this.http
