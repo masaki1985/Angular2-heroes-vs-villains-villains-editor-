@@ -15,19 +15,19 @@ export class VillainService {
     private http: Http,
   ) { }
 
-  getVillains() Observable<Villains[]> {
+  getVillains() Observable<Villain[]> {
     return this.http.get(this.villainsUrl)
                     .map(res => res.json().data as Villain[]);
   }
 
-  getVillain(id: number): Observable<Villains> {
+  getVillain(id: number): Observable<Villain> {
     const url = `${this.villainsUrl}/${id}`;
 
     return this.http.get(url)
                     .map(res => res.json().data as Villain);
   }
 
-  updataViallin(villain: Villain): Observable<Villain> {
+  updataVillain(villain: Villain): Observable<Villain> {
     const url = `${this.villainsUrl}/${villain.id}`;
 
     return this.http
@@ -47,5 +47,5 @@ export class VillainService {
                     .map(() => null);
   }
 
-  
+
 }
